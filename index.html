@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="/assets/icon.ico" type="image/x-icon">
     <title>
         Tripfy - Trusted Travel Agent's
     </title>
@@ -18,50 +19,79 @@
     <nav>
         <img src="./assets/logo.png" alt="" class="logo">
         <div class="buttonNav">
-            <a href="" class="isiButtonNav">
+            <a href="" class="isiButtonNav isiButtonNavHov1">
                 Home            
             </a>
             <div class="pipe"></div>
-            <a href="" class="isiButtonNav">
+            <a href="" class="isiButtonNav isiButtonNavHov2">
                 Our package           
             </a>
             <div class="pipe"></div>
-            <a href="" class="isiButtonNav">
+            <a href="" class="isiButtonNav isiButtonNavHov3">
                 Call us           
             </a>
         </div>
     </nav>
     <main>
         <section id="home">
-            <div class="field1">
-                <div class="fieldKiri">
-                    <div class="judulBgm">
-                        <p class="judul1">
-                            Your Trusted
-                        </p>
-                        <div class="buttonBgm">
-                            <button class="bgm">
-                                Play BGM
-                            </button>
-                            <img src="./assets/iconBgm.png" alt="" class="iconBgm">
+            <div class="backF">
+                <div class="field1">
+                    <div class="fieldKiri">
+                        <div class="judulBgm">
+                            <p class="judul1">
+                                Your Trusted
+                            </p>
+                            <div class="buttonBgm">
+                                <audio loop="true" src="/assets/bgm/lofi.mp3" id="bgmAudio"></audio>
+                                <button class="bgm" onclick="toggleBgm()">
+                                    Play BGM
+                                </button>
+                                <div class="iconBgm"></div>
+                            </div>
+                        </div>
+                        <div class="subJudulBgm">
+                            <img src="./assets/asset1.png" alt="" class="asset1">
+                            <p class="subJudul">
+                                Travel Agent's
+                            </p>
                         </div>
                     </div>
-                    <div class="subJudulBgm">
-                        <img src="./assets/asset1.png" alt="" class="asset1">
-                        <p class="subJudul">
-                            Travel Agent's
+                    <div class="fieldKanan">
+                        <p class="deskripsi">
+                            Your happines is our happines
                         </p>
+                        <div class="learnMore">
+                            <a href="" class="buttonLearnMore">
+                                Learn more
+                            </a>
+                            <img src="./assets/asset2.png" alt="" class="iconDeskripsi">
+                        </div>
                     </div>
                 </div>
-                <div class="fieldKanan">
-                    <p class="deskripsi">
-                        Your happines is our happines
-                    </p>
-                    <div class="learnMore">
-                        <a href="" class="buttonLearnMore">
-                            Learn more
-                        </a>
-                        <img src="./assets/asset2.png" alt="" class="iconDeskripsi">
+                <div class="field2">
+                    <div class="preview"></div>
+                    <div class="sosmed">
+                        <div class="linkSosmed">
+                            <a href="" class="buttonLinkSosmed gap1">
+                                <p class="textLinkSosmed">
+                                    Instagram        
+                                </p>
+                                <img src="./assets/asset3.png" alt="" class="asset2">
+                            </a>
+                            <a href="" class="buttonLinkSosmed gap2">
+                                <p class="textLinkSosmed">
+                                    Linkedin
+                                </p>
+                                <img src="./assets/asset3.png" alt="" class="asset2">
+                            </a>
+                            <a href="" class="buttonLinkSosmed gap3">
+                                <p class="textLinkSosmed">
+                                    WhatsApp         
+                                </p>
+                                <img src="./assets/asset3.png" alt="" class="asset2">
+                            </a>
+                        </div>
+                        <div class="imgSosmed"></div>
                     </div>
                 </div>
             </div>
@@ -71,4 +101,5 @@
 
     </footer>
 </body>
+<script src="./js/app.js"></script>
 </html>

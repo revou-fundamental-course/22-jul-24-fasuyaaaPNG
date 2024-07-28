@@ -3,7 +3,7 @@ html {
 }
 
 body {
-    background-color: #0D0D15;
+    background-color: #F5F5F5;
     padding: 0;
     margin: 0;
 }
@@ -19,6 +19,10 @@ nav {
     top: 3.255vh;
 }
 
+a {
+    text-decoration: none;
+}
+
 .logo {
     width: 112px;
     height: 24px;
@@ -32,10 +36,18 @@ nav {
 
 .isiButtonNav {
     text-decoration: none;
-    color: #F5F5F5;
+    color: #0D0D15;
     font-size: 1rem;
     font-family: "Montserrat", sans-serif;
     font-weight: 400;
+    scale: 1;
+    transition: scale 0.1s ease, color 0.1s ease;
+}
+
+.isiButtonNavHov1:hover, .isiButtonNavHov2:hover, .isiButtonNavHov3:hover {
+    scale: 0.95;
+    color: #DF0ACA;
+    transition: scale 0.1s ease, color 0.1s ease;
 }
 
 .pipe {
@@ -44,15 +56,26 @@ nav {
     border-radius: 10%;
 }
 
+.backF {
+    background-color: #0D0D15;
+    border-radius: 12px;
+    width: 95.608vw;
+    height: 605px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: 6.99vh;
+    padding-top: 6.12vh;
+}
+
 .field1 {
     display: flex;
     /* border: 1px solid rebeccapurple; */
-    width: 1177px;
+    width: 86.164vw;
     margin: auto;
-    position: relative;
-    top: 8.854vh;
     align-items: flex-end;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .fieldKiri {
@@ -80,35 +103,93 @@ nav {
     display: flex;
     align-items: center;
     gap: 8px;
+    /* border: 1px solid red; */
+    border-radius: 20px;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.bgmActive {
+    .bgm {
+        padding-left: 33px;
+        border: 1.2px solid #EDBDE7;
+        z-index: 1;
+        transition-duration: 0.5s, 0.5s, 0.1s;
+        transition-timing-function: ease, ease, ease;
+        transition-delay: 0s, 0s, 1s;
+        transition-property: padding-left, border, z-index;
+    }
+
+    .iconBgm {
+        position: relative;
+        right: 138px;
+        z-index: 0;
+        animation: rotate 5s linear infinite;
+        will-change: transform;
+        image-rendering: crisp-edges;
+        background-image: url("/assets/bgmIcon/pause.png");
+        background-size: cover;
+        transition-duration: 0.9s, 0.1s, 0s;
+        transition-timing-function: ease, ease, ease;
+        transition-delay: 0s, 0s, 7s;
+        transition-property: right, background-image, z-index;
+    }
+
+    width: max-content; 
 }
 
 .bgm {
+    cursor: pointer;
     width: 131px;
-    height: 35px;
+    height: 38px;
     background-color: transparent;
     border: 1.2px solid #DF0ACA;
     border-radius: 50px;
     color: #F5F5F5;
     font-family: "Manrope", sans-serif;
     font-size: 0.938rem;
+    position: relative;
+    padding-left: 0px;
+    z-index: 0;
+    transition-duration: 0.5s, 0.5s, 9s;
+    transition-timing-function: ease, ease, ease;
+    transition-delay: 0s, 0s, 0s;
+    transition-property: padding-left, border, z-index;
 }
 
 .iconBgm {
     width: 38px;
     height: 38px;
+    position: relative;
+    right: 0vw;
+    z-index: 1;
+    background-image: url("/assets/bgmIcon/play.png");
+    background-size: cover;
+    transition-duration: 0.9s, 0s, 0s;
+    transition-timing-function: ease, ease, ease;
+    transition-delay: 0s, 0s, 0s;
+    transition-property: right, background-image, z-index;
 }
 
 .subJudulBgm {
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: 29px;
     position: relative;
     top: 1.172vh;
     width: 646px;
+    /* border: 1px solid red; */
 }
 
 .asset1 {
-    width: 159px;
+    width: 146px;
     height: 58px;
 }
 
@@ -142,6 +223,21 @@ nav {
 .learnMore {
     display: flex;
     gap: 8px;
+    align-items: center;
+}
+
+.learnMore:hover {
+    .iconDeskripsi {
+        position: relative;
+        right: 170px;
+        rotate: 90deg;
+        transition: right 0.5s ease, rotate 0.5s ease;
+    }
+    .buttonLearnMore {
+        padding-left: 30px;
+        border: 1.2px solid #EDBDE7;
+        transition: padding-left 0.5s ease, border 0.5s ease;
+    }
 }
 
 .buttonLearnMore {
@@ -150,6 +246,7 @@ nav {
     height: 38px;
     color: #F5F5F5;
     font-size: 0.938rem;
+    padding-left: 0px;
     font-family: "Manrope", sans-serif;
     font-weight: 500;
     text-decoration: none;
@@ -157,9 +254,111 @@ nav {
     align-content: center;
     text-align: center;
     border-radius: 50px;
+    transition: padding-left 0.5s ease, border 0.5s ease;
 }
 
 .iconDeskripsi {
+    position: relative;
     width: 38px;
     height: 38px;
+    right: 0vw;
+    rotate: 0deg;
+    transition: right 0.5s ease, rotate 0.5s ease;
+}
+
+.field2 {
+    /* border: 1px solid red; */
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    width: max-content;
+    gap: 61px;
+    position: relative;
+    top: 7.943vh;
+}
+
+.preview {
+    width: 646px;
+    height: 311px;
+    /* border: 1px solid red; */
+    border-radius: 12px;
+    background-size: cover;
+    transition: background-image 1s ease;
+    background-image: url("/assets/preview/5.png");
+}
+
+.sosmed {
+    /* border: 1.2px solid #ffd7fb; */
+    width: 471px;
+    display: flex;
+    align-items: end;
+}
+
+.linkSosmed {
+    transform: rotate(-90deg);
+    position: relative;
+    bottom: 0.911vh;
+    right: 0.7vw;
+    height: max-content;
+    width: 166px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.gap1 {
+    gap: 19px;
+}
+
+.gap2 {
+    gap: 31px;
+}
+
+.gap3 {
+    gap: 17px;
+}
+
+.gap1:hover, .gap2:hover, .gap3:hover {
+    border: 1.2px solid #EDBDE7;
+    position: relative;
+    left: 1vh;
+    transition: left 0.2s ease, border 0.2s ease;
+}
+
+.buttonLinkSosmed {
+    border: 1.2px solid #DF0ACA;
+    margin: 0;
+    border-radius: 50px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    left: 0vh;
+    transition: left 0.2s ease, border 0.2s ease;
+}
+
+.textLinkSosmed {
+    text-decoration: none;
+    color: #F5F5F5;
+    font-size: 0.938rem;
+    font-family: "Manrope", sans-serif;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.asset2 {
+    width: 15px;
+    height: 15px;
+}
+
+.imgSosmed {
+    /* border: 1px solid cyan; */
+    width: 305px;
+    height: 230px;
+    border-radius: 12px;
+    background-image: url("/assets/negara/5.png");
+    background-size: cover;
+    background-position: center;
+    transition: background-image 1s ease;
 }
