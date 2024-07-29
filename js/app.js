@@ -15,7 +15,6 @@ var urlView = [
 ];
 
 var currentImageIndex = 0;
-var currentImageIndex = 0;
 
 function updateImagePreview() {
     var preview = document.querySelector('.preview');
@@ -29,6 +28,9 @@ function updateImageView() {
     currentImageIndex = (currentImageIndex + 1) % urlView.length;
 }
 
+setInterval(updateImagePreview, 3000);
+setInterval(updateImageView, 5000);
+
 function toggleBgm() {
     const buttonBgm = document.querySelector('.buttonBgm');
     const bgmAudio = document.getElementById('bgmAudio');
@@ -36,7 +38,6 @@ function toggleBgm() {
     if (buttonBgm.classList.contains('bgmActive')) {
         buttonBgm.classList.remove('bgmActive');
         bgmAudio.pause();
-        // bgmAudio.currentTime = 0;
     } else {
         buttonBgm.classList.add('bgmActive');
         bgmAudio.play().catch(error => {
@@ -44,6 +45,3 @@ function toggleBgm() {
         });
     }
 }
-
-setInterval(updateImagePreview, 7000);
-setInterval(updateImageView, 7000);

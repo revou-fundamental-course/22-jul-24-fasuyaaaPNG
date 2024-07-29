@@ -13,14 +13,29 @@ nav {
     align-items: center;
     justify-content: space-between;
     width: 91.215vw;
+    max-width: 1246px;
     margin-left: auto;
     margin-right: auto;
     position: relative;
-    top: 3.255vh;
+    top: 24.998px;
 }
 
 a {
     text-decoration: none;
+}
+
+#about {
+    /* border: 1px solid red; */
+    width: max-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#package {
+    /* border: 1px solid red; */
+    width: max-content;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .logo {
@@ -59,19 +74,19 @@ a {
 .backF {
     background-color: #0D0D15;
     border-radius: 12px;
-    width: 95.608vw;
+    width: 1306px;
     height: 605px;
     margin-left: auto;
     margin-right: auto;
     position: relative;
-    top: 6.99vh;
-    padding-top: 6.12vh;
+    top: 53.683px;
+    padding-top: 47.002px;
 }
 
 .field1 {
     display: flex;
     /* border: 1px solid rebeccapurple; */
-    width: 86.164vw;
+    width: 1177px;
     margin: auto;
     align-items: flex-end;
     justify-content: space-between;
@@ -183,7 +198,7 @@ a {
     align-items: center;
     gap: 29px;
     position: relative;
-    top: 1.172vh;
+    top: 9.001px;
     width: 646px;
     /* border: 1px solid red; */
 }
@@ -271,19 +286,20 @@ a {
     margin-left: auto;
     margin-right: auto;
     display: flex;
-    width: 86.164vw;
+    width: 1177px;
     gap: 61px;
     position: relative;
-    top: 7.943vh;
+    top: 61.002px;
 }
 
 .preview {
     width: 646px;
     height: 311px;
+    display: block;
     /* border: 1px solid red; */
     border-radius: 12px;
     background-size: cover;
-    transition: background-image 1s ease;
+    transition: background-image 0.5s ease;
     background-image: url("/assets/preview/5.png");
 }
 
@@ -297,7 +313,7 @@ a {
 .linkSosmed {
     transform: rotate(-90deg);
     position: relative;
-    bottom: 0.911vh;
+    bottom: 6.996px;
     right: 0.7vw;
     height: max-content;
     width: 166px;
@@ -321,7 +337,7 @@ a {
 .gap1:hover, .gap2:hover, .gap3:hover {
     border: 1.2px solid #EDBDE7;
     position: relative;
-    left: 1vh;
+    left: 7.68px;
     transition: left 0.2s ease, border 0.2s ease;
 }
 
@@ -360,5 +376,324 @@ a {
     background-image: url("/assets/negara/5.png");
     background-size: cover;
     background-position: center;
-    transition: background-image 1s ease;
+    transition: background-image 0.5s ease;
+}
+
+.judulAbout {
+    border: 1.2px solid #DF0ACA;
+    width: 106px;
+    height: 38px;
+    border-radius: 50px;
+    position: relative;
+    margin-top: 148.762px;
+    font-size: 0.938rem;
+    font-family: "Manrope", sans-serif;
+    font-weight: 600;
+    align-content: center;
+    text-align: center;
+}
+
+.textAbout1 {
+    width: 653.003px;
+    font-size: 2.25rem;
+    font-weight: 400;
+    font-family: "Manrope", sans-serif;
+    /* border: 1px solid red; */
+}
+
+.about1 {
+    /* border: 1px solid red; */
+    margin-top: 33.999px;
+    width: 1245.997px;
+    height: 196px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.pink {
+    padding-left: 9px;
+    padding-right: 9px;
+    color: #F5F5F5;
+    background-size: 200% 100%;
+    background-image: linear-gradient(to right, #F5F5F5 50%, #0D0D15 50%);
+    transition: background-position 1s linear, color 1s linear;
+}
+
+.pinkAnimate {
+    background-position: -100% 0;
+    color: #DF0ACA;
+}
+
+.count {
+    /* border: 1px solid red; */
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.pipe1 {
+    height: 2.125rem;
+    border: 0.063rem solid #EDBDE7;
+    border-radius: 10%;
+}
+
+.borderCount {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    /* border: 1px solid black; */
+}
+
+.numberCount {
+    font-size: 2.25rem;
+    font-weight: 500;
+    font-family: "Manrope", sans-serif;
+    margin: 0;
+}
+
+.textCount {
+    margin: 0;
+    font-weight: 500;
+    font-family: "Manrope", sans-serif;
+    font-size: 0.938rem;
+    color: #0D0D15;
+    opacity: 0.55;
+}
+
+.judulPackage {
+    border: 1.2px solid #DF0ACA;
+    width: 128px;
+    height: 38px;
+    border-radius: 50px;
+    position: relative;
+    margin-top: 102px;
+    font-size: 0.938rem;
+    font-family: "Manrope", sans-serif;
+    font-weight: 600;
+    align-content: center;
+    text-align: center;
+}
+
+.judulIntiPackage {
+    font-family: "Manrope", sans-serif;
+    font-size: 2.25rem;
+    width: 737px;
+    text-align: center;
+    margin: 0;
+    margin-top: 33.999px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.kotakPackage {
+    /* border: 1px solid red; */
+    margin-top: 39.997px;
+    width: 1246px;
+    height: 335px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    gap: 53px;
+}
+
+.kotakPackage1 {
+    /* border: 1px solid red; */
+    border-radius: 12px;
+    width: 539px;
+    height: 335px;
+    background-image: url('/assets/package/1.png');
+    background-size: cover;
+    position: relative;
+    bottom: 10px;
+    opacity: 0;   
+}
+
+.kotakPackage2 {
+    /* border: 1px solid red; */
+    width: 301px;
+    height: 335px;
+    border-radius: 12px;
+    background-image: url('/assets/package/2.png');
+    background-size: cover;
+    position: relative;
+    bottom: 10px;
+    opacity: 0;
+}
+
+.kotakPackage3 {
+    /* border: 1px solid red; */
+    width: 301px;
+    height: 335px;
+    border-radius: 12px;
+    background-image: url('/assets/package/3.png');
+    background-size: cover;
+    position: relative;
+    bottom: 10px;
+    opacity: 0;
+}
+
+.kotakPackage1:hover {
+    background-image: linear-gradient(rgba(0, 0, 0, 0),rgb(5, 5, 5)) , url('/assets/package/1.png');
+    cursor: pointer;
+    background-size: 105%;
+    background-position: center;  
+}
+
+.kotakPackage2:hover {
+    background-image: linear-gradient(rgba(0, 0, 0, 0),rgb(5, 5, 5)) , url('/assets/package/2.png');
+    cursor: pointer;
+    background-size: 105%;
+    background-position: center; 
+}
+
+.kotakPackage3:hover {
+    background-image: linear-gradient(rgba(0, 0, 0, 0),rgb(5, 5, 5)) , url('/assets/package/3.png');
+    cursor: pointer;
+    background-size: 105%;
+    background-position: center; 
+}
+
+
+.package1Active {
+    position: relative;
+    bottom: 0px;
+    opacity: 1;
+    transition: position 0.5s ease, bottom 0.5s ease,  opacity 0.5s ease;
+}
+
+.package2Active {
+    position: relative;
+    bottom: 0px;
+    opacity: 1;
+    transition: position 0.5s ease, bottom 0.5s ease,  opacity 0.5s ease;
+    transition-delay: 0.2s;
+}
+
+.package3Active {
+    position: relative;
+    bottom: 0px;
+    opacity: 1;
+    transition: position 0.5s ease, bottom 0.5s ease,  opacity 0.5s ease;
+    transition-delay: 0.4s;
+}
+
+.kotakPackageHari {
+    margin: 0;
+    border: 1.2px solid #9F9A9A;
+    width: 128px;
+    height: 38px;
+    align-content: center;
+    text-align: center;
+    border-radius: 50px;
+    background-color: #2d2d2d27;
+    color: #F1F0F0;
+    font-size: 0.938rem;
+    font-family: "Manrope", sans-serif;
+    font-weight: 500;
+    backdrop-filter: blur(4px);
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.kotakPackageJudulDeskBawah {
+    color: #F5F5F5;
+    margin-top: 176px;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.kotakPackageJudulDeskBawah1 {
+    color: #F5F5F5;
+    margin-top: 154px;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.kotakPackageJudul {
+    font-size: 1.5rem;
+    font-weight: 600;
+    font-family: "Manrope", sans-serif;
+    margin: 0;
+}
+
+.kotakPackageDesk {
+    font-size: 1rem;
+    font-weight: 300;
+    font-family: "Manrope", sans-serif;
+    margin: 0;
+}
+
+.kotakPackageDesk1 {
+    width: 274px;
+}
+
+@media only screen and (max-width: 1024px) {
+    .preview {
+        display: none;
+    }
+
+    .count {
+        flex-direction: column;
+    }
+    .backF {
+        width: 1006px;
+    }
+    .field1 {
+        width: 528px;
+        margin: 0;
+        padding-left: 70px;
+    }
+    .field2 {
+        width: max-content;
+        float: left;
+        padding-left: 20px;
+    }
+    .sosmed {
+        margin-left: 45px;
+    }
+    .about1 {
+        width: 899.997px;
+        margin-top: 115.2px;
+    }
+    .textAbout1 {
+        width: 51.804vw;
+    }
+    .kotakPackage1 {
+        /* border: 1px solid red; */
+        border-radius: 12px;
+        width: 301px;
+        height: 335px;
+        background-image: url('/assets/package/1.png');
+        background-size: cover;
+        background-position: center;
+    }
+    .kotakPackage {
+        /* border: 1px solid red; */
+        margin-top: 39.997px;
+        width: max-content;
+        height: 335px;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        gap: 13px;
+    }
+    #about {
+        padding-left: 25px;
+    }
+    #package {
+        /* border: 1px solid red; */
+        padding-left: 30px;
+        margin-top: 153.6px;
+        width: max-content;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
