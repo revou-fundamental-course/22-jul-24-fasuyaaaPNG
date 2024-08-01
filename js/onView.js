@@ -80,10 +80,21 @@ function updateClassesInViewport() {
     const count1 = document.querySelectorAll('.countAnchor1');
     const count2 = document.querySelectorAll('.countAnchor2');
     const count3 = document.querySelectorAll('.countAnchor3');
-    const textAbout = document.querySelectorAll('.pink')
-    const package1 = document.querySelectorAll('.kotakPackage1')
-    const package2 = document.querySelectorAll('.kotakPackage2')
-    const package3 = document.querySelectorAll('.kotakPackage3')
+    const textAbout = document.querySelectorAll('.pink');
+    const package1 = document.querySelectorAll('.kotakPackage1');
+    const package2 = document.querySelectorAll('.kotakPackage2');
+    const package3 = document.querySelectorAll('.kotakPackage3');
+    const brand1 = document.querySelectorAll('.brand1');
+    const brand2 = document.querySelectorAll('.brand2');
+    const brand3 = document.querySelectorAll('.brand3');
+    const brand4 = document.querySelectorAll('.brand4');
+    const brand5 = document.querySelectorAll('.brand5');
+    const brand6 = document.querySelectorAll('.brand6');
+    const judulPackage = document.querySelectorAll('.judulPackage')
+    const judulIntiPackage = document.querySelectorAll('.judulIntiPackage')
+    const judulCall = document.querySelectorAll('.judulCall')
+    const textCall = document.querySelectorAll('.textCall')
+    const formCall = document.querySelectorAll('.formCall')
 
     count1.forEach(element => {
         if (isInViewport(element)) {
@@ -133,6 +144,72 @@ function updateClassesInViewport() {
     package3.forEach(element => {
         if (isInViewport(element)) {
             element.classList.add("package3Active");
+        }
+    });
+    
+    brand1.forEach(element => {
+        if (isInViewport(element)) {
+            element.classList.add("brand1Active");
+        }
+    });
+
+    brand2.forEach(element => {
+        if (isInViewport(element)) {
+            element.classList.add("brand2Active");
+        }
+    });
+
+    brand3.forEach(element => {
+        if (isInViewport(element)) {
+            element.classList.add("brand3Active");
+        }
+    });
+
+    brand4.forEach(element => {
+        if (isInViewport(element)) {
+            element.classList.add("brand4Active");
+        }
+    });
+
+    brand5.forEach(element => {
+        if (isInViewport(element)) {
+            element.classList.add("brand5Active");
+        }
+    });
+
+    brand6.forEach(element => {
+        if (isInViewport(element)) {
+            element.classList.add("brand6Active");
+        }
+    });
+
+    judulPackage.forEach(element => {
+        if (isInViewport(element)) {
+            element.classList.add("judulPackageActive");
+        }
+    });
+
+    judulIntiPackage.forEach(element => {
+        if (isInViewport(element)) {
+            element.classList.add("judulIntiPackageActive");
+        }
+    });
+
+    judulCall.forEach(element => {
+        if (isInViewport(element)) {
+            element.classList.add("judulCallActive");
+        }
+    });
+
+    textCall.forEach(element => {
+        if (isInViewport(element)) {
+            element.classList.add("textCallActive");
+        }
+    });
+
+    formCall.forEach(element => {
+        if (isInViewport(element)) {
+            element.classList.add("formCallActive");
         }
     });
 }

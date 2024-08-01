@@ -23,11 +23,11 @@
                 Home            
             </a>
             <div class="pipe"></div>
-            <a href="" class="isiButtonNav isiButtonNavHov2">
+            <a href="#package" class="isiButtonNav isiButtonNavHov2">
                 Our package           
             </a>
             <div class="pipe"></div>
-            <a href="" class="isiButtonNav isiButtonNavHov3">
+            <a href="#anchorCall" class="isiButtonNav isiButtonNavHov3">
                 Contact us           
             </a>
         </div>
@@ -97,6 +97,7 @@
             </div>
         </section>
         <section id="about">
+            <div id="aboutAnchor"></div>
             <div class="judulAbout">
                 About Us
             </div>
@@ -128,7 +129,8 @@
                 </div>
             </div>
         </section>
-        <section id="package">
+        <section id="packageBox">
+            <div class="anchorPackage" id="package"></div>
             <div class="judulPackage">
                 Our Package
             </div>
@@ -176,10 +178,128 @@
                     </div>
                 </div>
             </div>
+            <div class="brand-wrapper">
+                <img src="./assets/brand/1.png" alt="" class="brand1">
+                <img src="./assets/brand/2.png" alt="" class="brand2">
+                <img src="./assets/brand/3.png" alt="" class="brand3">
+                <img src="./assets/brand/4.png" alt="" class="brand4">
+                <img src="./assets/brand/5.png" alt="" class="brand5">
+                <img src="./assets/brand/6.png" alt="" class="brand6">
+            </div>
+        </section>
+        <section id="call">
+            <div id="anchorCall"></div>
+            <div class="call-wrapper">
+                <div class="judulCall">
+                    Contact Us
+                </div>
+                <div class="isiCall">
+                    <p class="textCall">
+                        Don't wait any longer! Start your adventure and explore new experience today
+                    </p>
+                    <form action="" class="formCall">
+                        <div class="boxInput">
+                            <div class="boxInputName">
+                                <label for="NameInput" class="boxInputNameJudul">
+                                    Name
+                                </label>
+                                <input type="text" id="NameInput" class="boxInputNameInput" placeholder="Your name">
+                            </div>
+                            <div class="boxInputName">
+                                <label for="email" class="boxInputNameJudul">
+                                    Email
+                                </label>
+                                <input type="text" id="email" class="boxInputNameInput" placeholder="Your name">
+                            </div>
+                            <div class="boxInputName">
+                                <label for="interested" class="boxInputNameJudul">
+                                    What are you interested in?
+                                </label>
+                                <select id="interested" name="interested" class="boxInputNameInput">
+                                    <option class="disabledOption" value="" disabled selected>
+                                        Select option
+                                    </option>
+                                    <option value="inclusive">
+                                        All-Inclusive Packages
+                                    </option>
+                                    <option value="cultural">
+                                        Cultural Package
+                                    </option>
+                                    <option value="adventure">
+                                        Adventure Package
+                                    </option>
+                                </select>
+                            </div>
+                            <button class="submit" type="submit">
+                                Send
+                            </button>
+                        </div>
+                        <img src="./assets/asset5.png" alt="" class="asset5">
+                    </form>
+                </div>
+            </div>
         </section>
     </main>
     <footer>
-
+        <div class="wrapperFooter">
+            <div class="footerKiri">
+                <img src="./assets/asset6.png" alt="" class="logoFooter">
+                <p class="textFooter">
+                    The experience of an extraordinary journey can be had in an easy way
+                </p>
+            </div>
+            <div class="footerKanan">
+                <div class="footerKananWrap">
+                    <p class="judulFooterKanan">
+                        COMPANY
+                    </p>
+                    <div class="isiFooterKanan">
+                        <a href="#aboutAnchor" class="anchorIsiFooterKanan">
+                            About Us
+                        </a>
+                        <a href="#package" class="anchorIsiFooterKanan">
+                            Our Package
+                        </a>
+                        <a href="#anchorCall" class="anchorIsiFooterKanan">
+                            Contact Us
+                        </a>
+                    </div>
+                </div>
+                <div class="footerKananWrap">
+                    <p class="judulFooterKanan">
+                        LEGAL
+                    </p>
+                    <div class="isiFooterKanan">
+                        <a href="" class="anchorIsiFooterKanan">
+                            Terms of Service
+                        </a>
+                        <a href="" class="anchorIsiFooterKanan">
+                            Privacy Policy
+                        </a>
+                        <a href="" class="anchorIsiFooterKanan">
+                            Cookies Policy
+                        </a>
+                    </div>
+                </div>
+            </div> 
+        </div>
+        <hr>
+        <div class="wrapperFooterBawah">
+            <p class="textFooterBawah">
+                © 2024 tripify Inc. All right reserved
+            </p>
+            <div class="iconFooterBawah">
+                <a href="" class="iconFooter">
+                    <img src="./assets/iconFooter/1.png"  class="iconFooter" alt="">
+                </a>
+                <a href="" class="iconFooter">
+                    <img src="./assets/iconFooter/2.png"  class="iconFooter" alt="">
+                </a>
+                <a href="" class="iconFooter">
+                    <img src="./assets/iconFooter/3.png"  class="iconFooter" alt="">
+                </a>
+            </div>
+        </div>
     </footer>
 </body>
 <script src="./js/app.js"></script>

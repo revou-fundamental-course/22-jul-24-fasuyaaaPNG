@@ -1,5 +1,6 @@
 html {
     scroll-behavior: smooth;
+    background-color: #0D0D15;
 }
 
 body {
@@ -31,8 +32,24 @@ a {
     margin-right: auto;
 }
 
+#aboutAnchor {
+    position: relative;
+    bottom: 20px;
+}
+
 #package {
     /* border: 1px solid red; */
+    position: relative;
+    top: 60px;
+}
+
+#packageBox {
+    width: max-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#call {
     width: max-content;
     margin-left: auto;
     margin-right: auto;
@@ -56,19 +73,24 @@ a {
     font-family: "Montserrat", sans-serif;
     font-weight: 400;
     scale: 1;
-    transition: scale 0.1s ease, color 0.1s ease;
+    transition: scale 0.1s ease-out, color 0.1s ease-out;
 }
 
 .isiButtonNavHov1:hover, .isiButtonNavHov2:hover, .isiButtonNavHov3:hover {
     scale: 0.95;
     color: #DF0ACA;
-    transition: scale 0.1s ease, color 0.1s ease;
+    transition: scale 0.1s ease-out, color 0.1s ease-out;
 }
 
 .pipe {
     height: 0.5rem;
     border: 0.063rem solid #EDBDE7;
     border-radius: 10%;
+}
+
+@keyframes backFAnimate {
+    from {opacity: 0; scale: 0.9;}
+    to {opacity: 1; scale: 1;}
 }
 
 .backF {
@@ -81,6 +103,10 @@ a {
     position: relative;
     top: 53.683px;
     padding-top: 47.002px;
+    transition: width 0.2s ease-out;
+    overflow: hidden;
+    animation-name: backFAnimate;
+    animation-duration: 0.3s;
 }
 
 .field1 {
@@ -137,7 +163,7 @@ a {
         border: 1.2px solid #EDBDE7;
         z-index: 1;
         transition-duration: 0.5s, 0.5s, 0.1s;
-        transition-timing-function: ease, ease, ease;
+        transition-timing-function: ease-out, ease-out, ease-out;
         transition-delay: 0s, 0s, 1s;
         transition-property: padding-left, border, z-index;
     }
@@ -152,7 +178,7 @@ a {
         background-image: url("/assets/bgmIcon/pause.png");
         background-size: cover;
         transition-duration: 0.9s, 0.1s, 0s;
-        transition-timing-function: ease, ease, ease;
+        transition-timing-function: ease-out, ease-out, ease-out;
         transition-delay: 0s, 0s, 7s;
         transition-property: right, background-image, z-index;
     }
@@ -174,7 +200,7 @@ a {
     padding-left: 0px;
     z-index: 0;
     transition-duration: 0.5s, 0.5s, 9s;
-    transition-timing-function: ease, ease, ease;
+    transition-timing-function: ease-out, ease-out, ease-out;
     transition-delay: 0s, 0s, 0s;
     transition-property: padding-left, border, z-index;
 }
@@ -188,7 +214,7 @@ a {
     background-image: url("/assets/bgmIcon/play.png");
     background-size: cover;
     transition-duration: 0.9s, 0s, 0s;
-    transition-timing-function: ease, ease, ease;
+    transition-timing-function: ease-out, ease-out, ease-out;
     transition-delay: 0s, 0s, 0s;
     transition-property: right, background-image, z-index;
 }
@@ -246,12 +272,12 @@ a {
         position: relative;
         right: 170px;
         rotate: 90deg;
-        transition: right 0.5s ease, rotate 0.5s ease;
+        transition: right 0.5s ease-out, rotate 0.5s ease-out;
     }
     .buttonLearnMore {
         padding-left: 30px;
         border: 1.2px solid #EDBDE7;
-        transition: padding-left 0.5s ease, border 0.5s ease;
+        transition: padding-left 0.5s ease-out, border 0.5s ease-out;
     }
 }
 
@@ -269,7 +295,7 @@ a {
     align-content: center;
     text-align: center;
     border-radius: 50px;
-    transition: padding-left 0.5s ease, border 0.5s ease;
+    transition: padding-left 0.5s ease-out, border 0.5s ease-out;
 }
 
 .iconDeskripsi {
@@ -278,7 +304,7 @@ a {
     height: 38px;
     right: 0vw;
     rotate: 0deg;
-    transition: right 0.5s ease, rotate 0.5s ease;
+    transition: right 0.5s ease-out, rotate 0.5s ease-out;
 }
 
 .field2 {
@@ -299,7 +325,7 @@ a {
     /* border: 1px solid red; */
     border-radius: 12px;
     background-size: cover;
-    transition: background-image 0.5s ease;
+    transition: background-image 0.5s ease-out;
     background-image: url("/assets/preview/5.png");
 }
 
@@ -338,7 +364,7 @@ a {
     border: 1.2px solid #EDBDE7;
     position: relative;
     left: 7.68px;
-    transition: left 0.2s ease, border 0.2s ease;
+    transition: left 0.2s ease-out, border 0.2s ease-out;
 }
 
 .buttonLinkSosmed {
@@ -351,7 +377,7 @@ a {
     justify-content: center;
     position: relative;
     left: 0vh;
-    transition: left 0.2s ease, border 0.2s ease;
+    transition: left 0.2s ease-out, border 0.2s ease-out;
 }
 
 .textLinkSosmed {
@@ -376,7 +402,7 @@ a {
     background-image: url("/assets/negara/5.png");
     background-size: cover;
     background-position: center;
-    transition: background-image 0.5s ease;
+    transition: background-image 0.5s ease-out;
 }
 
 .judulAbout {
@@ -476,6 +502,22 @@ a {
     font-weight: 600;
     align-content: center;
     text-align: center;
+    transform: translateX(-30px);
+    opacity: 0;
+}
+
+.judulPackageActive {
+    opacity: 1;
+    transform: translateX(0px);
+    transition: all 0.5s ease;
+}
+
+.anchorPackage {
+    /* border: 1px solid red; */
+    width: 1px;
+    height: 1px;
+    position: relative;
+    top: 40px;
 }
 
 .judulIntiPackage {
@@ -487,6 +529,15 @@ a {
     margin-top: 33.999px;
     margin-left: auto;
     margin-right: auto;
+    transform: translateY(20px);
+    z-index: 1;
+    opacity: 0;
+}
+
+.judulIntiPackageActive {
+    opacity: 1;
+    transform: translateX(0px);
+    transition: all 0.5s ease;
 }
 
 .kotakPackage {
@@ -498,6 +549,7 @@ a {
     margin-right: auto;
     display: flex;
     gap: 53px;
+    z-index: 3;
 }
 
 .kotakPackage1 {
@@ -562,14 +614,14 @@ a {
     position: relative;
     bottom: 0px;
     opacity: 1;
-    transition: position 0.5s ease, bottom 0.5s ease,  opacity 0.5s ease;
+    transition: position 0.5s ease-out, bottom 0.5s ease-out,  opacity 0.5s ease-out;
 }
 
 .package2Active {
     position: relative;
     bottom: 0px;
     opacity: 1;
-    transition: position 0.5s ease, bottom 0.5s ease,  opacity 0.5s ease;
+    transition: position 0.5s ease-out, bottom 0.5s ease-out,  opacity 0.5s ease-out;
     transition-delay: 0.2s;
 }
 
@@ -577,7 +629,7 @@ a {
     position: relative;
     bottom: 0px;
     opacity: 1;
-    transition: position 0.5s ease, bottom 0.5s ease,  opacity 0.5s ease;
+    transition: position 0.5s ease-out, bottom 0.5s ease-out,  opacity 0.5s ease-out;
     transition-delay: 0.4s;
 }
 
@@ -633,6 +685,384 @@ a {
 
 .kotakPackageDesk1 {
     width: 274px;
+}
+
+.brand-wrapper {
+    width: 1240px;
+    height: 41px;
+    /* border: 1px solid red; */
+    margin-top: 119px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    gap: 70px;
+}
+
+.brand1 {
+    width: 199px;
+    height: 28px;
+    scale: 0.8;
+    opacity: 0;
+}
+
+.brand2 {
+    width: 117px;
+    height: 33px;
+    scale: 0.8;
+    opacity: 0;
+}
+
+.brand3 {
+    width: 150px;
+    height: 25px;
+    scale: 0.8;
+    opacity: 0;
+}
+
+.brand4 {
+    width: 150px;
+    height: 24.5px;
+    scale: 0.8;
+    opacity: 0;
+}
+
+.brand5 {
+    width: 124px;
+    height: 39px;
+    scale: 0.8;
+    opacity: 0;
+}
+
+.brand6 {
+    width: 150px;
+    height: 34px;
+    scale: 0.8;
+    opacity: 0;
+}
+
+.brand1Active {
+    scale: 1;
+    opacity: 1;
+    transition: scale 0.5s ease-out, opacity 0.5s ease-out;
+    transition-delay: 0.6s;
+}
+
+.brand2Active {
+    scale: 1;
+    opacity: 1;
+    transition: scale 0.5s ease-out, opacity 0.5s ease-out;
+    transition-delay: 0.3s;
+}
+
+.brand3Active {
+    scale: 1;
+    opacity: 1;
+    transition: scale 0.5s ease-out, opacity 0.5s ease-out;
+    transition-delay: 0s;
+}
+
+.brand4Active {
+    scale: 1;
+    opacity: 1;
+    transition: scale 0.5s ease-out, opacity 0.5s ease-out;
+    transition-delay: 0s;
+}
+
+.brand5Active {
+    scale: 1;
+    opacity: 1;
+    transition: scale 0.5s ease-out, opacity 0.5s ease-out;
+    transition-delay: 0.3s;
+}
+
+.brand6Active {
+    scale: 1;
+    opacity: 1;
+    transition: scale 0.5s ease-out, opacity 0.5s ease-out;
+    transition-delay: 0.6s;
+}
+
+.call-wrapper {
+    width: 1246px;
+    height: 630px;
+    /* border: 1px solid red; */
+}
+
+#anchorCall {
+    /* border: 1px solid red; */
+    height: 1px;
+    width: 1px;
+    position: relative;
+    bottom: 20px;
+}
+
+#call {
+    position: relative;
+    margin-top: 102px;
+}
+
+.judulCall {
+    border: 1.2px solid #DF0ACA;
+    width: 122px;
+    height: 38px;
+    border-radius: 50px;
+    font-size: 0.938rem;
+    font-family: "Manrope", sans-serif;
+    font-weight: 600;
+    align-content: center;
+    text-align: center;
+    opacity: 0;
+    transform: translateX(-30px);
+}
+
+.judulCallActive {
+    transform: translateX(0px);
+    opacity: 1;
+    transition: all 0.5s ease;
+}
+
+.isiCall {
+    display: flex;
+    width: 1248px;
+    align-items: start;
+    letter-spacing: 1px;
+    margin-top: 41px;
+    gap: 52px;
+}
+
+.textCall {
+    font-family: "Manrope", sans-serif;
+    font-size: 2.25rem;
+    width: 527px;
+    margin: 0;
+    opacity: 0;
+}
+
+.textCallActive {
+    opacity: 1;
+    transition: all 1s ease;
+}
+
+.formCall {
+    width: 669px;
+    height: 32px;
+    border-radius: 12px;
+    border: 1px solid #DF0ACA;
+    overflow: hidden;
+}
+
+.formCallActive {
+    height: 532px;
+    transition: all 1s ease-out;
+    transition-delay: 0.8s;
+}
+
+.asset5 {
+    width: 262px;
+    height: 222.7px;
+    position: relative;
+    bottom: 200px;
+    left: 330px;
+    z-index: -1;
+}
+
+.boxInput {
+    /* border: 1px solid darkblue; */
+    width: max-content;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+}
+
+.boxInputName {
+    font-family: "Manrope", sans-serif;
+    font-weight: 600;
+    font-size: 0.938rem;
+    /* border: 1px solid red; */
+    width: max-content;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+.boxInputNameJudul {
+    color: #0D0D15;
+    margin-bottom: 14px;
+}
+
+.boxInputNameInput {
+    width: 462px;
+    border-bottom: 1.5px solid #2D2D2D;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    background-color: transparent;
+    font-family: "Manrope", sans-serif;
+    font-weight: 500;
+    color: #2D2D2D;
+    padding-left: 0px;
+    margin: 0;
+    padding-bottom: 12px;
+}
+
+.boxInputNameInput::placeholder {
+    font-family: "Manrope", sans-serif;
+    font-weight: 500;
+    color: #2D2D2D;
+}
+
+.boxInputNameInput:focus {
+    outline: none;
+}
+
+#interested {
+    cursor: pointer;
+}
+
+.submit {
+    width: 122px;
+    height: 38px;
+    border-radius: 50px;
+    margin-top: 30px;
+    background-color: #0D0D15;
+    color: #F5F5F5;
+    font-family: "Manrope", sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+    font-size: 0.938rem;
+    padding: 0;
+    transform: translateY(0px);
+    transition: transform 0.2s ease;
+}
+
+.submit:hover {
+    transform: translateY(-2px);
+    border: 1.2px solid #DF0ACA;
+    transition: transform 0.2s ease;
+}
+
+option {
+    background-color: #3a3a3a;
+    color: #F5F5F5;
+    border-radius: 0px;
+}
+
+.disabledOption{
+    background-color: rgb(0, 0, 0);
+ }
+
+.wrapperFooter {
+    width: 1246px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 91px;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+}
+
+.logoFooter {
+    width: 62px;
+    height: 59px;
+}
+
+.textFooter {
+    color: #9F9A9A;
+    margin: 0;
+    margin-top: 14px;
+    line-height: 24px;
+    font-family: "Manrope", sans-serif;
+    font-weight: 400;
+    width: 378px;
+    font-size: 0.938rem;
+}
+
+.footerKanan {
+    display: flex;
+    gap: 60px;
+}
+
+.footerKananWrap {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.anchorIsiFooterKanan:hover{
+    color: #F5F5F5;
+    transition: color 0.3s ease-out;
+}
+
+.judulFooterKanan {
+    color: #F5F5F5;
+    font-family: "Manrope", sans-serif;
+    font-weight: 400;
+    font-size: 0.938rem;
+}
+
+.anchorIsiFooterKanan {
+    font-family: "Manrope", sans-serif;
+    font-size: 0.938rem;
+    color: #9F9A9A;
+    text-decoration: none;
+    transition: color 0.1s ease-out;
+}
+
+.judulFooterKanan {
+    margin: 0;
+}
+
+.isiFooterKanan {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+footer {
+    margin-top: 80px;
+    width: 91.215;
+    background-color: #0D0D15;
+    height: 358px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+hr {
+    width: 1246px;
+    border: 0.8px solid #9F9A9A;
+    margin-top: 32px;
+    opacity: 0.5;
+}
+
+.wrapperFooterBawah {
+    width: 1246px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 43px;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+}
+
+.textFooterBawah{
+    font-family: "Manrope", sans-serif;
+    font-size: 0.938rem;
+    font-weight: 600;
+    color: #F5F5F5;
+    margin: 0;
+}
+
+.iconFooterBawah {
+    display: flex;
+    gap: 37px;
+    margin-right: 30px;
+}
+
+.iconFooter {
+    width: 24px;
+    height: 24px;
 }
 
 @media only screen and (max-width: 1024px) {
@@ -697,3 +1127,324 @@ a {
         margin-right: auto;
     }
 }
+
+@media only screen and (max-width: 480px) {
+    html {
+        background-color: white;
+    }
+
+    .logo {
+        width: 58px;
+        height: 13px;
+    }
+
+    .buttonNav {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+    
+    .isiButtonNav {
+        text-decoration: none;
+        color: #0D0D15;
+        font-size: 0.625rem;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 400;
+        scale: 1;
+        transition: scale 0.1s ease-out, color 0.1s ease-out;
+    }
+    
+    .isiButtonNavHov1:hover, .isiButtonNavHov2:hover, .isiButtonNavHov3:hover {
+        scale: 0.95;
+        color: #DF0ACA;
+        transition: scale 0.1s ease-out, color 0.1s ease-out;
+    }
+
+    .backF {
+        background-color: #0D0D15;
+        border-radius: 0px;
+        width: 100vw;
+        height: 83vh;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+        top: 53.683px;
+        padding-top: 23px;
+        transition: width 0.2s ease-out;
+        overflow: hidden;
+        animation-name: backFAnimate;
+        animation-duration: 0.3s;
+    }
+
+    .judul1 {
+        color: #F5F5F5;
+        font-family: "Manrope", sans-serif;
+        font-size: 2.25rem;
+        font-weight: 600;
+        margin: 0;
+        height: 49px;
+        width: 260px;
+    }
+
+    .asset1 {
+        width: 72px;
+        height: 28px;
+        position: relative;
+        bottom: 20px;
+    }
+
+    .fieldKiri {
+        width: 103px;
+        /* border: 1px solid red; */
+    }
+
+    .field1 {
+        width: 268px;
+        margin: 0;
+        padding-left: 20px;
+    }
+
+    .buttonBgm {
+        display: none;
+    }
+
+    .subJudul {
+        color: #F5F5F5;
+        font-family: "Manrope", sans-serif;
+        font-size: 2.25rem;
+        font-weight: 600;
+        margin: 0;
+        height: 87px;
+        width: max-content;
+        /* border: 1px solid red; */
+        position: relative;
+        right:20px;
+        bottom: 10px;
+    }
+
+    .deskripsi {
+        font-size: 0.625rem;
+        font-family: "Manrope", sans-serif;
+        letter-spacing: 1px;
+        font-weight: 300;
+        width: 85px;
+        color: #F5F5F5;
+        position: relative;
+        
+    }
+
+    .fieldKanan {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: max-content;
+        /* border: 1px solid red; */
+        height: max-content;
+        position: relative;
+        left: 50px;
+        bottom: 80px;
+    }
+
+    .field2 {
+        width: max-content;
+        float: left;
+        padding-left: 20px;
+    }
+    
+    .judulBgm {
+        display: flex;
+        align-items: end;
+        width: 307px;
+        /* border: 1px solid red; */
+    }
+    
+    .learnMore {
+        display: none;
+    }
+
+    .preview {
+        width: 280px;
+        height: 135px;
+        display: block;
+        /* border: 1px solid red; */
+        border-radius: 12px;
+        background-size: cover;
+        transition: background-image 0.5s ease-out;
+        background-image: url("/assets/preview/5.png");
+        position: relative;
+        bottom: 30px;
+    }
+
+    .sosmed {
+        /* border: 1.2px solid #ffd7fb; */
+        width: max-content;
+        position: relative;
+        right: 385px;
+        display: flex;
+        align-items: center;
+        top: 140px;
+        gap: 16px;
+    }
+    
+    .linkSosmed {
+        transform: rotate(0deg);
+        position: relative;
+        bottom: 6.996px;
+        right: 0.7vw;
+        height: 28px;
+        width: 116px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .gap1 {
+        gap: 19px;
+    }
+    
+    .gap2 {
+        gap: 31px;
+    }
+    
+    .gap3 {
+        gap: 17px;
+    }
+    
+    .gap1:hover, .gap2:hover, .gap3:hover {
+        border: 1.2px solid #EDBDE7;
+        position: relative;
+        left: 7.68px;
+        transition: left 0.2s ease-out, border 0.2s ease-out;
+    }
+    
+    .buttonLinkSosmed {
+        border: 1.2px solid #DF0ACA;
+        margin: 0;
+        border-radius: 50px;
+        height: 38px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        left: 0vh;
+        transition: left 0.2s ease-out, border 0.2s ease-out;
+    }
+    
+    .textLinkSosmed {
+        text-decoration: none;
+        color: #F5F5F5;
+        font-size: 10px;
+        font-family: "Manrope", sans-serif;
+        font-weight: 500;
+        text-decoration: none;
+    }
+     
+    .asset2 {
+        width: 15px;
+        height: 15px;
+    }
+    
+    .imgSosmed {
+        /* border: 1px solid cyan; */
+        width: 200px;
+        height: 151px;
+        border-radius: 12px;
+        background-image: url("/assets/negara/5.png");
+        background-size: cover;
+        background-position: center;
+        transition: background-image 0.5s ease-out;
+    }
+
+    .judulAbout {
+        border: 1.2px solid #DF0ACA;
+        width: 81px;
+        height: 28px;
+        border-radius: 50px;
+        position: relative;
+        margin-top: 98px;
+        font-size: 10px;
+        margin-left: 14px;
+        font-family: "Manrope", sans-serif;
+        font-weight: 600;
+        align-content: center;
+        text-align: center;
+    }
+    
+    .textAbout1 {
+        width: 289px;
+        font-size: 20px;
+        font-weight: 400;
+        font-family: "Manrope", sans-serif;
+
+        /* border: 1px solid red; */
+    }
+    
+    #about {
+        padding-left: 0px;
+        margin: 0;
+    }
+
+    .about1 {
+        /* border: 1px solid red; */
+        margin-top: 20px;
+        width: 96vw;
+        height: 196px;
+        display: flex;
+        align-items:start;
+        flex-direction: column;
+        padding-left: 14px;
+    }
+    
+    .pink {
+        color: #F5F5F5;
+        background-size: 200% 100%;
+        background-image: linear-gradient(to right, #F5F5F5 50%, #f5f5f5 50%);
+        transition: background-position 1s linear, color 1s linear;
+    }
+    
+    .pinkAnimate {
+        background-position: -100% 0;
+        color: #DF0ACA;
+    }
+    
+    .count {
+        /* border: 1px solid red; */
+        display: flex;
+        align-items: center;
+        gap: 35px;
+        flex-direction: row;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 13px;
+    }
+    
+    .pipe1 {
+        height: 2.125rem;
+        border: 0.013rem solid #EDBDE7;
+        border-radius: 10%;
+    }
+    
+    .borderCount {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1px;
+        /* border: 1px solid black; */
+    }
+    
+    .numberCount {
+        font-size: 15px;
+        font-weight: 400;
+        font-family: "Manrope", sans-serif;
+        margin: 0;
+    }
+    
+    .textCount {
+        margin: 0;
+        font-weight: 400;
+        font-family: "Manrope", sans-serif;
+        font-size: 8px;
+        color: #0D0D15;
+        opacity: 0.55;
+    }
+}  
